@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AB4C354-3E95-4B2C-A853-7005E1039160}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Login</RootNamespace>
+    <AssemblyName>Login</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AnalysisServices, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.AnalysisServices.SPClient.Interfaces, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=2.4.0.16114, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="baobiao\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baobiao\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baobiao\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baobiao\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JiZhangDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiZhangDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JiZhangDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiZhangDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JiZhangDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiZhangDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JiZhangDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiZhangDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JiZhangDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiZhangDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JiZhangDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiZhangDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JiZhangDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiZhangDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JiZhangDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiZhangDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JiZhangDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiZhangDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JiZhangDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiZhangDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JiZhangDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiZhangDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JiZhangDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiZhangDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JiZhangDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiZhangDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="JiZhangDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JiZhangDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="jizhang\支出记账.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jizhang\支出记账.Designer.cs">
+      <DependentUpon>支出记账.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jizhang\收入记账.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jizhang\收入记账.Designer.cs">
+      <DependentUpon>收入记账.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Password\修改密码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password\修改密码.Designer.cs">
+      <DependentUpon>修改密码.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Password\关于.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password\关于.Designer.cs">
+      <DependentUpon>关于.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ru.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="shouru.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>shouru.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zhanghu\账户对账.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zhanghu\账户对账.Designer.cs">
+      <DependentUpon>账户对账.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zhanghu\账户转账.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zhanghu\账户转账.Designer.cs">
+      <DependentUpon>账户转账.cs</DependentUpon>
+    </Compile>
+    <Compile Include="jizhang\记账信息管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jizhang\记账信息管理.Designer.cs">
+      <DependentUpon>记账信息管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="zhanghu\账户信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zhanghu\账户信息.Designer.cs">
+      <DependentUpon>账户信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zhanghu\账户信息（添加）.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zhanghu\账户信息（添加）.Designer.cs">
+      <DependentUpon>账户信息（添加）.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zhanghu\账户信息（编辑）.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zhanghu\账户信息（编辑）.Designer.cs">
+      <DependentUpon>账户信息（编辑）.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zhanghu\账目收支明细查看.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zhanghu\账目收支明细查看.Designer.cs">
+      <DependentUpon>账目收支明细查看.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zhangmu\账目类型.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zhangmu\账目类型.Designer.cs">
+      <DependentUpon>账目类型.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zhangmu\账目类型（添加）.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zhangmu\账目类型（添加）.Designer.cs">
+      <DependentUpon>账目类型（添加）.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zhangmu\账目类型（编辑）.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zhangmu\账目类型（编辑）.Designer.cs">
+      <DependentUpon>账目类型（编辑）.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zhuce\注册.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="zhuce\注册.Designer.cs">
+      <DependentUpon>注册.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="baobiao\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baobiao\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baobiao\Report1.rdlc" />
+    <EmbeddedResource Include="baobiao\Report2.rdlc" />
+    <EmbeddedResource Include="jizhang\支出记账.resx">
+      <DependentUpon>支出记账.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jizhang\收入记账.resx">
+      <DependentUpon>收入记账.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password\修改密码.resx">
+      <DependentUpon>修改密码.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password\关于.resx">
+      <DependentUpon>关于.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zhanghu\账户对账.resx">
+      <DependentUpon>账户对账.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zhanghu\账户转账.resx">
+      <DependentUpon>账户转账.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jizhang\记账信息管理.resx">
+      <DependentUpon>记账信息管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="zhanghu\账户信息.resx">
+      <DependentUpon>账户信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zhanghu\账户信息（添加）.resx">
+      <DependentUpon>账户信息（添加）.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zhanghu\账户信息（编辑）.resx">
+      <DependentUpon>账户信息（编辑）.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zhanghu\账目收支明细查看.resx">
+      <DependentUpon>账目收支明细查看.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zhangmu\账目类型.resx">
+      <DependentUpon>账目类型.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zhangmu\账目类型（添加）.resx">
+      <DependentUpon>账目类型（添加）.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zhangmu\账目类型（编辑）.resx">
+      <DependentUpon>账目类型（编辑）.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zhuce\注册.resx">
+      <DependentUpon>注册.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="JiZhangDataSet.xsc">
+      <DependentUpon>JiZhangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiZhangDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JiZhangDataSet.xss">
+      <DependentUpon>JiZhangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet1.xsc">
+      <DependentUpon>JiZhangDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiZhangDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JiZhangDataSet1.xss">
+      <DependentUpon>JiZhangDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet10.xsc">
+      <DependentUpon>JiZhangDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiZhangDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JiZhangDataSet10.xss">
+      <DependentUpon>JiZhangDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet11.xsc">
+      <DependentUpon>JiZhangDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiZhangDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JiZhangDataSet11.xss">
+      <DependentUpon>JiZhangDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet12.xsc">
+      <DependentUpon>JiZhangDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiZhangDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JiZhangDataSet12.xss">
+      <DependentUpon>JiZhangDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet13.xsc">
+      <DependentUpon>JiZhangDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiZhangDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JiZhangDataSet13.xss">
+      <DependentUpon>JiZhangDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet2.xsc">
+      <DependentUpon>JiZhangDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiZhangDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JiZhangDataSet2.xss">
+      <DependentUpon>JiZhangDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet3.xsc">
+      <DependentUpon>JiZhangDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiZhangDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JiZhangDataSet3.xss">
+      <DependentUpon>JiZhangDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet4.xsc">
+      <DependentUpon>JiZhangDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiZhangDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JiZhangDataSet4.xss">
+      <DependentUpon>JiZhangDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet5.xsc">
+      <DependentUpon>JiZhangDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiZhangDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JiZhangDataSet5.xss">
+      <DependentUpon>JiZhangDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet6.xsc">
+      <DependentUpon>JiZhangDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiZhangDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JiZhangDataSet6.xss">
+      <DependentUpon>JiZhangDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet7.xsc">
+      <DependentUpon>JiZhangDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiZhangDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JiZhangDataSet7.xss">
+      <DependentUpon>JiZhangDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet8.xsc">
+      <DependentUpon>JiZhangDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiZhangDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JiZhangDataSet8.xss">
+      <DependentUpon>JiZhangDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet9.xsc">
+      <DependentUpon>JiZhangDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="JiZhangDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JiZhangDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JiZhangDataSet9.xss">
+      <DependentUpon>JiZhangDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="ru.xsc">
+      <DependentUpon>ru.xsd</DependentUpon>
+    </None>
+    <None Include="ru.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ru.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ru.xss">
+      <DependentUpon>ru.xsd</DependentUpon>
+    </None>
+    <None Include="shouru.xsc">
+      <DependentUpon>shouru.xsd</DependentUpon>
+    </None>
+    <None Include="shouru.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>shouru.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="shouru.xss">
+      <DependentUpon>shouru.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\beijing.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\背景.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\登录.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\取消.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\chongzhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\jizhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\shouru.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\zhichu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\fuzhijizhang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\qidong.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\timg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\viewdetail.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

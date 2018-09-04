@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="JiZhangDataSet2" targetNamespace="http://tempuri.org/JiZhangDataSet2.xsd" xmlns:mstns="http://tempuri.org/JiZhangDataSet2.xsd" xmlns="http://tempuri.org/JiZhangDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="JiZhangConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JiZhangConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Login.Properties.Settings.GlobalReference.Default.JiZhangConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ZhanghuTableAdapter" GeneratorDataComponentClassName="ZhanghuTableAdapter" Name="Zhanghu" UserDataComponentName="ZhanghuTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JiZhangConnectionString (Settings)" DbObjectName="JiZhang.dbo.Zhanghu" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT 账户名称 FROM dbo.Zhanghu</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="账户名称" DataSetColumn="账户名称" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="JiZhangConnectionString (Settings)" DbObjectName="JiZhang.dbo.Zhanghu" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT   账户名称
+FROM      Zhanghu
+WHERE   (操作人 = 'yanglian11')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="JiZhangDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="JiZhangDataSet2" msprop:Generator_UserDSName="JiZhangDataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Zhanghu" msprop:Generator_TableClassName="ZhanghuDataTable" msprop:Generator_TableVarName="tableZhanghu" msprop:Generator_RowChangedName="ZhanghuRowChanged" msprop:Generator_TablePropName="Zhanghu" msprop:Generator_RowDeletingName="ZhanghuRowDeleting" msprop:Generator_RowChangingName="ZhanghuRowChanging" msprop:Generator_RowEvHandlerName="ZhanghuRowChangeEventHandler" msprop:Generator_RowDeletedName="ZhanghuRowDeleted" msprop:Generator_RowClassName="ZhanghuRow" msprop:Generator_UserTableName="Zhanghu" msprop:Generator_RowEvArgName="ZhanghuRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="账户名称" msprop:Generator_ColumnVarNameInTable="column账户名称" msprop:Generator_ColumnPropNameInRow="账户名称" msprop:Generator_ColumnPropNameInTable="账户名称Column" msprop:Generator_UserColumnName="账户名称">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
